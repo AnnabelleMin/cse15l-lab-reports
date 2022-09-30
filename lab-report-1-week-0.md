@@ -38,4 +38,26 @@ Then, type exit in the terminal to logout from the remote control and back to yo
 
 See, the same command in remote server and your server return different contents. **ls -lat** would give you all the files, shown in long format, sort by time already. So, you can see the different files you get from remote and your computer.
 
+> Part 4: Moving Files with scp
+
+Now, we are going to make a new file on our computer and copy it to the remote server. We should start with create a new file on our laptop by finding 'File' botton on left-top corner and then name the file as WhereAmI.java. Then we paste the java file content that is provided by the instruction (or in the future, the file you want to copy) in to the file.
+
+On terminal, type :
+javac WhereAmI.java (This one is for compiling the file)
+java WhereAmI
+
+The terminal should return ('os.name','user.name','user.file','user.dir') respectively.
+
+Up to now, you successfully create a new java file on your laptop and make it run. Yayyyy! We are going to move this file with scp.
+
+Type % scp WhereAmI.java cs15lfa22dx@ieng6.ucsd.edu:~/ in to the terminal to move the file (dx should be replaced by your own accountid)
+It will ask you for a password, just type it in and return
+
+Now the whereAmI.java is in remote server. Try to login to the remote server by ieng and then check if the file exists.
+
+The overall steps should be similar to this:
+
+![Image](step6.jpg)
+
+On the last few lines on the screenshot, you can see **WhereAmI.java  perl5** This indicates that WhereAmI.java is in the remote server. Yayy!
 
