@@ -5,9 +5,13 @@ Test for lab0:
 > Part 1: Install VSCode
 
 Hello! This is the first lab report about getting the remote access. For starting that, you should download VScode on your desktop. [Click here for VScode download](https://www.youtube.com). You should see the webpage as the screenshot below. 
+
 Then, select the system your laptop is (IOS/ Windows).
+
 ![Image](step1.jpg)
+
 With all that installed, you should see the VScode page as below. The detailed installation part is skipped since I actually downloaded this few months ago and don't have to download the VScode again.
+
 ![Image](step2.jpg)
 
 > Part 2: Remotely connecting
@@ -18,4 +22,5 @@ Then, you will be requested to enter your password to login. Type the password i
 
 The successful remote control page should be very similar to the following screenshot.
 ![Image](step3.jpg)
+
 
