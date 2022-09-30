@@ -21,6 +21,21 @@ Open the VS code and the terminal, then type in % **ssh cs15lfa22dx@ieng6.ucsd.e
 Then, you will be requested to enter your password to login. Type the password in the terminal. It is totally normal that the password does not show up in the screen. If you enter the password correctly, yayyy, you are in!
 
 The successful remote control page should be very similar to the following screenshot.
+
 ![Image](step3.jpg)
+
+> Part 3: Trying some commands
+
+Now, let's try running commands on both remote and local server to see how the result would be different!
+
+Type **ls -lat** in your terminal on your remote server. You should see something similar to this:
+
+![Image](step4.jpg)
+
+Then, type exit in the terminal to logout from the remote control and back to your local desktop. Type **ls -lat** again to see what happens.
+
+![Image](step5.jpg)
+
+See, the same command in remote server and your server return different contents. **ls -lat** would give you all the files, shown in long format, sort by time already. So, you can see the different files you get from remote and your computer.
 
 
