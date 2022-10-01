@@ -106,7 +106,7 @@ There are some small tricks to make our lives easier.
 
 ## If you want to have multiple command in the same terminal, you can write in same line, just to have ; between each of them
 
-# #If you want to directly go from login to remote server to make some command over there, you can also type the command with "" around it
+## If you want to directly go from login to remote server to make some command over there, you can also type the command with "" around it
 
 ![Image](step11.jpg)
 
