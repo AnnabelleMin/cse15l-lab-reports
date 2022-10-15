@@ -1,4 +1,4 @@
- ## Lab Report 2
+## Lab Report 2
  > Part 1
  
  First, the code for simplest Search Engine is as below: This is the same as the NumberServer.java but replace the num to String.
