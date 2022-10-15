@@ -1,5 +1,6 @@
  ## Lab Report 2
  > Part 1
+ 
  First, the code for simplest Search Engine is as below: This is the same as the NumberServer.java but replace the num to String.
    
     import java.io.IOException;
@@ -59,6 +60,15 @@
     }
     }
 
+Second, lets see how this actually works in webpage!
+
+![image](image27.jpg)
+
+In the path, we add /add?s=anewstringtoadd. This returns an empty list so that the user know the list is know empty and ready to run!
+
+![image](image26.jpg)
+
+In the path, we add /add?s=REPLICA, the website shows REPLICA on its webpage.
 
 > Part 2
 
