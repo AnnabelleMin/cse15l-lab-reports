@@ -62,13 +62,19 @@
 
 Second, lets see how this actually works in webpage!
 
-![image](image27.jpg)
+![image](image29.jpg)
 
 In the path, we add /add?s=anewstringtoadd. This returns an empty list so that the user know the list is know empty and ready to run!
 
-![image](image26.jpg)
+![image](image27.jpg)
 
-In the path, we add /add?s=REPLICA, the website shows REPLICA on its webpage.
+In the path, we add /add?s=REPLICA, the website shows REPLICA on its webpage.The word after = is taken as string.
+
+![image](image30.jpg)
+
+In the path, we use search method to search for the StringList. We search for RE, and return two REPLICA in the list as before i typed two times in the input to see if duplicate input will affect the number of output. Remember, the search is case sensitive!
+
+
 
 > Part 2
 
