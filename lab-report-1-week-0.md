@@ -1,8 +1,12 @@
-  import java.io.IOException;
-  import java.net.URI;
-  import java.util.*;
+ ## Lab Report 2
+ > Part 1
+ First, the code for simplest Search Engine is as below: This is the same as the NumberServer.java but replace the num to String.
+   
+    import java.io.IOException;
+    import java.net.URI;
+    import java.util.*;
 
-  class Handler implements URLHandler {
+    class Handler implements URLHandler {
     List<String> outputList = new ArrayList<String>();
     
     public String handleRequest(URI url) {
@@ -40,9 +44,9 @@
         }
         return "404 Not Found!";
     }
-}
+    }
 
-class NumberServer {
+    class NumberServer {
     public static void main(String[] args) throws IOException {
         if(args.length == 0){
             System.out.println("Missing port number! Try any number between 1024 to 49151");
@@ -53,11 +57,9 @@ class NumberServer {
 
         Server.start(port, new Handler());
     }
-}
+    }
 
 
-
-## Lab 2 Report
 > Part 2
 
 First, we are going to fix the Avgwithoutlowest method. By writing some tests on JUnit, I figure out the failure inducing input.
