@@ -2,18 +2,20 @@
  > Find command 
  
  First, we use find -name in terminal. The input is as following:
-   
+   ```
     heejin@Annabelles-MBP skill-demo1 % find ./technical -name chapter-6.txt
+   ```
  The output we saw is:
-
+```
     ./technical/911report/chapter-6.txt
-    
+``` 
 For the find -name command, the output is showing the path of the file that we are going to look for and return it. We can use it when we want to see the file that match the input name.
 
 Second, I want to try find -ls in the terminal and see how it is different than simply printing the -ls.
 Input:
- 
+```
     find ./technical -ls
+```
 Output:
 ```
 9948378       24 -rwxr-xr-x    1 heejin           staff               10659 Oct 26 13:56 ./technical/plos/pmed.0020210.txt
