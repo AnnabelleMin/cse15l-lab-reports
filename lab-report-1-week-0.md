@@ -1208,7 +1208,11 @@ output:
 ```
 We can see that the less -N method actually print the content of the file with line number beside each line so that the file is more clear. This is helpful when we want to have a glimpse of the file content and the length of the file.
 
-Second, we want to explore around less 
+Second, we want to explore around less +F input.
+input:
+```
+less -X ./technical/911report/preface.txt
+```
 output:
 ```
  We hope that the terrible losses chronicled in this report can create something
@@ -1275,3 +1279,60 @@ output:
     
 Waiting for data... (interrupt to abort)
 ```
+The less +F command will display the last page of the file and wait for more data for me to add into the file. We can use this command when we want to directly write after the file.
+
+Third, I want to explore less -V.
+input:
+```
+ less -V ./technical/911report/preface.txt
+```
+output:
+```
+less 581.2 (POSIX regular expressions)
+Copyright (C) 1984-2021  Mark Nudelman
+
+less comes with NO WARRANTY, to the extent permitted by law.
+For information about the terms of redistribution,
+see the file named README in the less distribution.
+Home page: https://greenwoodsoftware.com/less
+```
+By myself, I have no clue what the output is about. So I type less --help in command line and look for V. The answer is less -V shows the version number of less. I guess this will be useful if we want to share the file to others and want to make sure every tool is in the same version.
+
+> Grep command 
+First, we try grep -i to see what is surprising.
+input:
+```
+grep -i "understand" ./technical/911report/preface.txt
+```
+output:
+```
+and national security did not understand how grave this threat could be, and did not
+                understanding of a landmark in the history of our nation.
+```
+See! This is so cool. grep -i actually searches for the word in the string and return the line with the string in it. It is more like a search method in the file. We can use it when we want to search for particular word or code in the file.
+
+Second, we try grep -c
+
+input:
+```
+ grep -c "understand"  ./technical/911report/preface.txt 
+```
+output:
+```
+2
+```
+Combined with the grep -i method we used above, we can tell that in preface.txt, the word "understand" appears 2 times. Now, with -c method, we can know times of a word appears in the file if we want to.
+
+Third, we explore grep -o
+input:
+```
+grep -o "understand"  ./technical/911report/preface.txt
+```
+output:
+```
+understand
+understand
+```
+The grep -o only displays the matched string appeared in the preface.txt instead of the line that it is in. We can use grep -o to possibly check the times it is in the file and probably with other commands, we can check with case insensitive. 
+
+That is the end of lab report 3 where we play around the grep, less, find in command line. Thank you for reading!
