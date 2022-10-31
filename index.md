@@ -1299,6 +1299,8 @@ Home page: https://greenwoodsoftware.com/less
 By myself, I have no clue what the output is about. So I type less --help in command line and look for V. The answer is less -V shows the version number of less. I guess this will be useful if we want to share the file to others and want to make sure every tool is in the same version.
 
 > Grep command 
+
+
 First, we try grep -i to see what is surprising.
 input:
 ```
