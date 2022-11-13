@@ -53,3 +53,12 @@ sh start.sh 1234
 ```
 
 >Part2
+
+For the first method with scp, it took me 35 seconds to make an edit on local and copy to the remote.
+For the second method with vim, I used 27 seconds.
+
+If I have to use one of these methods, I would prefer the vim method as I am worry that I did not scp every local change to the remote change and create bugs over remote change. However, if I do directly in vim mode, that case could be largely reduced.
+
+I think how much memory the project takes would affect my choice in mode. If the project is taken thousands of GB, I would definitely use the vim mode to change the project directly in the remote server since I dont want my own computer to crack or run two hours just for one simple change.
+
+This is the end of Lab report 4. Thank you for reading.
