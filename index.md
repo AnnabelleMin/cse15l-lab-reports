@@ -1,64 +1,63 @@
-Hi! This is lab report 4, we will explore vim this time.
->Part 1
+Hi! This is lab report 5, we will explore grading script this time.
+>Part 1 the grade.sh code
 
-I am choosing to use the least vim lines to finish this task: Adding a new line to print before File[] paths = f.listfiles()
 
-1) Open terminal and type 
-```
-vim DocSearchServer.java <return>
-```
-This pull of the file that we want to change in the vim mode
-![Image](image42.jpg)
 
-2) 	
-```
-Shift a
-press downward arraws 15 times 
-<return> <tab> <empty> <space>
-```
 
-	
-This command change the cursor to the line that we want to add stuff by return
-The Tab and Empty Space is just for indenting the cursor to where we want to insert lines.
-	
-![Image](image43.jpg)
-	
-3) 
 ```
-System.out.println(f.toString() + " is a directory");
+# Create your grading script here
+
+# set -e
+
+rm -rf student-submission
+git clone $1 student-submission
+GRADE=0
+
+# check if ListExamples.java exists
+cd student-submission
+if [ -f ListExamples.java ]
+then
+    echo "ListExamples.java file found"
+else
+    echo "ListExamples.java file not found"
+    echo " You have earned "$GRADE " out of 3"
+    exit 1
+fi
+
+cd ..
+cp -r lib student-submission/
+cp TestListExamples.java student-submission/
+cd student-submission
+javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
+
+# check that the compile went fine
+if [ $? -eq 00 ]
+then
+    echo "Successfully compile all the files"
+else
+    echo "There is some compile error"
+    echo " You have earned "$GRADE " out of 3"
+    exit 1
+fi
+
+java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore TestListExamples
+
+if [ $? -eq 00 ]
+then
+    GRADE=3
+    echo "Cong! You passed all tests!"
+    echo " You have earned "$GRADE " out of 3"
+else
+    echo "Try again, some tests not passed"
+    echo " You have earned "$GRADE " out of 3"
+fi
 ```
-	
-Type the above line on the screen
-	
-![Image](image44.jpg)
-	
-5) 
-```
-<ESC> :x 
-sh start.sh 1234
-```
-This exits the vim mode and type sh start.sh 1234 on the command line. and we can see the file to run.
-	
-![Image](image45.jpg)
+>Part2 3 submissions loaded on the browser
+![Image](image51.jpg)
+![Image](image52.jpg)
+![Image](image53.jpg)
 
-So the whole line is
-```
-vim DocSearchServer.java <return>
-Shift a
-press downward arraws 15 times 
-<return> <tab> <empty> <space>
-System.out.println(f.toString() + " is a directory");
-<ESC> :x 
-sh start.sh 1234
-```
 
->Part2
 
-For the first method with scp, it took me 35 seconds to make an edit on local and copy to the remote.
-For the second method with vim, I used 27 seconds.
 
-If I have to use one of these methods, I would prefer the vim method as I am worry that I did not scp every local change to the remote change and create bugs over remote change. However, if I do directly in vim mode, that case could be largely reduced.
-
-I think how much memory the project takes would affect my choice in mode. If the project is taken thousands of GB, I would definitely use the vim mode to change the project directly in the remote server since I dont want my own computer to crack or run two hours just for one simple change.
-
-This is the end of Lab report 4. Thank you for reading.
+This is the end of Lab report 5. Thank you for reading.
